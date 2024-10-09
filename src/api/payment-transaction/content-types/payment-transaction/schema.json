@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_transactions",
+  "info": {
+    "singularName": "payment-transaction",
+    "pluralName": "payment-transactions",
+    "displayName": "Payment_Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Transaction_Id": {
+      "type": "integer"
+    },
+    "Ticket_Id": {
+      "type": "integer"
+    },
+    "Payment_Method_Id": {
+      "type": "integer"
+    },
+    "User_Id": {
+      "type": "integer"
+    },
+    "Event_Id": {
+      "type": "integer"
+    },
+    "Amount": {
+      "type": "integer"
+    },
+    "Transaction_Date": {
+      "type": "datetime"
+    },
+    "Transaction_Status": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::payment-method.payment-method",
+      "inversedBy": "payment_transactions"
+    },
+    "event_ticket": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::transaction-status.transaction-status"
+    }
+  }
+}

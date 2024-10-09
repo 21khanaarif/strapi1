@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transaction_statuses",
+  "info": {
+    "singularName": "transaction-status",
+    "pluralName": "transaction-statuses",
+    "displayName": "Event_Ticket",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ticket_Id": {
+      "type": "integer"
+    },
+    "Event_Id": {
+      "type": "integer"
+    },
+    "User_Id": {
+      "type": "integer"
+    },
+    "Ticket_Type": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "integer"
+    },
+    "Purchase_Date": {
+      "type": "datetime"
+    },
+    "Event_Date": {
+      "type": "datetime"
+    },
+    "Venue": {
+      "type": "string"
+    },
+    "Seat_Number": {
+      "type": "integer"
+    },
+    "invoice": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::invoice.invoice"
+    }
+  }
+}

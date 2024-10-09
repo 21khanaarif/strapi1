@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_registrants",
+  "info": {
+    "singularName": "event-registrant",
+    "pluralName": "event-registrants",
+    "displayName": "Event_Registrant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Registrant_Id": {
+      "type": "integer"
+    },
+    "Event_Id": {
+      "type": "integer"
+    },
+    "Registrant_Type": {
+      "type": "string"
+    },
+    "Registration_Date": {
+      "type": "datetime"
+    },
+    "Registration_Status": {
+      "type": "string"
+    },
+    "event_participants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-participant.event-participant"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event",
+      "mappedBy": "event_registrant"
+    },
+    "payment_method": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-method.payment-method"
+    }
+  }
+}

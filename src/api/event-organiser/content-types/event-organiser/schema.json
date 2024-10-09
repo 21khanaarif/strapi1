@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_organisers",
+  "info": {
+    "singularName": "event-organiser",
+    "pluralName": "event-organisers",
+    "displayName": "Event_Organiser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Organiser_Id": {
+      "type": "integer"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Phone_Number": {
+      "type": "integer"
+    },
+    "Organisation_Name": {
+      "type": "string"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Invoice_Id": {
+      "type": "integer"
+    },
+    "Event_Id": {
+      "type": "integer"
+    },
+    "User_Id": {
+      "type": "integer"
+    },
+    "Transaction_Id": {
+      "type": "integer"
+    },
+    "Amount": {
+      "type": "float"
+    },
+    "Payment_Date": {
+      "type": "datetime"
+    },
+    "Payment_Method": {
+      "type": "string"
+    }
+  }
+}

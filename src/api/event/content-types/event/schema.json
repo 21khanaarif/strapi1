@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Event_Id": {
+      "type": "integer"
+    },
+    "Event_Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Date_and_Time": {
+      "type": "datetime"
+    },
+    "Venue": {
+      "type": "string"
+    },
+    "event_participant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event-participant.event-participant",
+      "inversedBy": "events"
+    },
+    "event_registrant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event-registrant.event-registrant",
+      "inversedBy": "events"
+    },
+    "Display_Picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
