@@ -27,18 +27,6 @@
     "Venue": {
       "type": "string"
     },
-    "event_participant": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::event-participant.event-participant",
-      "inversedBy": "events"
-    },
-    "event_registrant": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::event-registrant.event-registrant",
-      "inversedBy": "events"
-    },
     "Display_Picture": {
       "type": "media",
       "multiple": false,
@@ -46,6 +34,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "events"
     }
   }
 }
