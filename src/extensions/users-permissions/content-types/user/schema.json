@@ -75,11 +75,8 @@
       "type": "boolean",
       "default": false
     },
-    "otp": {
+    "otp_code": {
       "type": "string"
-    },
-    "otp_expiry": {
-      "type": "datetime"
     }
   }
 }

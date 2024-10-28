@@ -850,8 +850,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'api::event.event'
     >;
     is_verified: Attribute.Boolean & Attribute.DefaultTo<false>;
-    otp: Attribute.String;
-    otp_expiry: Attribute.DateTime;
+    otp_code: Attribute.String;
     password: Attribute.Password &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
