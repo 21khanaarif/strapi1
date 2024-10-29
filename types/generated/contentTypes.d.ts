@@ -851,6 +851,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
     >;
     is_verified: Attribute.Boolean & Attribute.DefaultTo<false>;
     otp_code: Attribute.String;
+    otp_expiry: Attribute.DateTime;
     password: Attribute.Password &
       Attribute.Private &
       Attribute.SetMinMaxLength<{

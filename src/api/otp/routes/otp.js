@@ -1,21 +1,17 @@
-// src/api/otp/routes/otp.js
 module.exports = {
     routes: [
       {
         method: 'POST',
-        path: '/otp/send',
-        handler: 'otp.sendOtp',
+        path: '/otp/sendWithExpiry',
+        handler: 'otp.sendOtpWithExpiry',
         config: { auth: false },
       },
       {
         method: 'POST',
-        path: '/otp/verify',
-        handler: 'otp.verifyOtp',
+        path: '/otp/verifyWithExpiry',
+        handler: 'otp.verifyOtpWithExpiry',
         config: { auth: false },
       },
     ],
   };
   
-
-
-
