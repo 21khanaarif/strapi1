@@ -849,7 +849,9 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'oneToMany',
       'api::event.event'
     >;
+    firstname: Attribute.String;
     is_verified: Attribute.Boolean & Attribute.DefaultTo<false>;
+    lastname: Attribute.String;
     otp_code: Attribute.String;
     otp_expiry: Attribute.DateTime;
     password: Attribute.Password &
